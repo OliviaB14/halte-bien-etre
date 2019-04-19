@@ -210,11 +210,5 @@
 </div>
 <!-- Gallery section end -->
 
-
-
-
-
-
-
 @endsection
-</html>
+

@@ -66,6 +66,7 @@
         <div class="loader"></div>
     </div>
 
+    @include('includes.header')
     @yield('body')
 
     <!--====== Javascripts & Jquery ======-->
@@ -84,3 +85,5 @@
 
 
 @include('includes.footer')
+
+</html>
