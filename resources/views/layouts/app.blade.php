@@ -3,8 +3,8 @@
 <head>
     <title>La Halte au Bien-être</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Yoga HTML Template">
-    <meta name="keywords" content="Yoga, html">
+    <meta name="description" content="Centre de bien-être">
+    <meta name="keywords" content="Yoga, html, bien-être, massages, cure">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="shortcut icon"/>
