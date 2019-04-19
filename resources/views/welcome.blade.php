@@ -1,99 +1,295 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>La Halte au Bien-être</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga HTML Template">
+    <meta name="keywords" content="Yoga, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon"/>
 
-        <title>Laravel</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/flaticon.css"/>
+    <link rel="stylesheet" href="css/slicknav.min.css"/>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
             }
+        }
+    </script>
 
-            .full-height {
-                height: 100vh;
-            }
+</head>
+<body>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+<div w3-include-html="navbar.html"></div>
+<!-- Hero section -->
+<section class="hero-section set-bg" data-setbg="img/hero-bg.png">
+    <div class="hero-content-warp">
+        <div class="container">
+            <div class="hero-content">
+                <img src="img/hero-icon.png" alt="">
+                <h2>Find your inner <span>CHI</span></h2>
+                <p>Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</p>
+                <a href="#" class="site-btn">discover</a>
+            </div>
+        </div>
+        <img src="img/hero-img.png" class="hero-img" alt="">
+    </div>
+</section>
+<!-- Hero section end -->
 
-            .position-ref {
-                position: relative;
-            }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+<!-- Courses section -->
+<section class="courses-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="course-item">
+                    <div class="ci-icon">
+                        <i class="flaticon-002-yin-yang"></i>
+                    </div>
+                    <span>Begginer & Advanced</span>
+                    <h4>Yoga</h4>
+                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            </div>
+            <div class="col-md-4">
+                <div class="course-item">
+                    <div class="ci-icon">
+                        <i class="flaticon-001-meditation i-fix"></i>
+                    </div>
+                    <span>Begginer & Advanced</span>
+                    <h4>Hatha</h4>
+                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item">
+                    <div class="ci-icon">
+                        <i class="flaticon-021-yoga-mat"></i>
+                    </div>
+                    <span>Begginer & Advanced</span>
+                    <h4>Pilates</h4>
+                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</section>
+<!-- Courses section end -->
+
+
+<!-- Meditation section -->
+<section class="meditation-section set-bg" data-setbg="img/meditation-bg.png">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="meditation-content">
+                    <div class="sp-title text-white">
+                        <span>Begginer & Advanced</span>
+                        <h4>Meditation Sessions</h4>
+                    </div>
+                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
+                    <a href="#" class="site-btn">discover</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="img/meditation-img.png" class="meditation-img" alt="">
+</section>
+<!-- Meditation section end -->
+
+
+<!-- Timetable section -->
+<section class="timetable-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-9">
+                <div class="timetable-box">
+                    <div class="sp-title">
+                        <span>Begginer & Advanced</span>
+                        <h4>Working Hours</h4>
+                    </div>
+                    <ul>
+                        <li><span>Monday</span>09:30 AM -19:30 PM</li>
+                        <li><span>Tuesday</span>09:30 AM -19:30 PM</li>
+                        <li><span>Wednesday</span>09:30 AM -19:30 PM</li>
+                        <li><span>Thursday</span>09:30 AM -19:30 PM</li>
+                        <li><span>Friday</span>09:30 AM -19:30 PM</li>
+                        <li><span>Saturday</span>09:30 AM -16:30 PM</li>
+                        <li><span>Sunday</span>Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="timetable-text">
+                    <div class="sp-title">
+                        <span>Begginer & Advanced</span>
+                        <h4>Meditation Sessions</h4>
+                    </div>
+                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
+                    <div class="site-progress-bars">
+                        <div class="progress-item">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span>60%</span></div>
+                            </div>
+                            <p>Breathing</p>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span>87%</span></div>
+                            </div>
+                            <p>Meditation</p>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
+                            </div>
+                            <p>Flexibility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Timetable section end -->
+
+
+<!-- Testimonial section -->
+<section class="testimonial-section spad set-bg" data-setbg="img/testimonial-bg.jpg">
+    <img src="img/testimonial-img-1.png" class="testimonial-img-1" alt="">
+    <img src="img/testimonial-img-2.png" class="testimonial-img-2" alt="">
+    <div class="container">
+        <div class="sp-title text-white text-center">
+            <img src="img/quota.png" alt="">
+            <span>Begginer & Advanced</span>
+            <h4>Meditation Sessions</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="testimonial-content">
+                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in fauci-bus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
+                    <h6>Maria Smith</h6>
+                    <span>Customer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial section end -->
+
+
+
+<!-- Contact section -->
+<div class="contact-section">
+    <div class="map-warp"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14376.077865872314!2d-73.879277264103!3d40.757667781624285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1546528920522" style="border:0" allowfullscreen></iframe></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+                <div class="contact-box contact-text">
+                    <div class="sp-title">
+                        <span>Begginer & Advanced</span>
+                        <h4>Meditation Sessions</h4>
+                    </div>
+                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+                    <h6>Information</h6>
+                    <ul>
+                        <li>Main Str, no 23, New York</li>
+                        <li>+546 990221 123</li>
+                        <li>hosting@contact.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact section end -->
+
+
+<!-- Gallery section -->
+<div class="gallery-section">
+    <div class="gallery-slider owl-carousel">
+        <div class="gallery-item">
+            <img src="img/gallery/1.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="img/gallery/2.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="img/gallery/3.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="img/gallery/4.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="img/gallery/5.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!-- Gallery section end -->
+
+
+@include('includes.footer')
+
+
+
+<!--====== Javascripts & Jquery ======-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/circle-progress.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    includeHTML();
+</script>
+
+
+</body>
 </html>
