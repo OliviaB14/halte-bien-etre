@@ -2,23 +2,19 @@
 
 
 @section('body')
-<div w3-include-html="navbar.html"></div>
-<!-- Hero section -->
 <section class="hero-section set-bg" data-setbg="img/hero-bg.png">
     <div class="hero-content-warp">
         <div class="container">
             <div class="hero-content">
                 <img src="img/hero-icon.png" alt="">
-                <h2>Find your inner <span>CHI</span></h2>
-                <p>Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</p>
+                <h2>La <span>Halte</span> au bien-être</h2>
+                <p>Massages bien-être relaxant, décontractant et énergisant.</p>
                 <a href="#" class="site-btn">discover</a>
             </div>
         </div>
         <img src="img/hero-img.png" class="hero-img" alt="">
     </div>
 </section>
-<!-- Hero section end -->
-
 
 <!-- Courses section -->
 <section class="courses-section">
@@ -29,9 +25,9 @@
                     <div class="ci-icon">
                         <i class="flaticon-002-yin-yang"></i>
                     </div>
-                    <span>Begginer & Advanced</span>
-                    <h4>Yoga</h4>
-                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                    <h4>Massages</h4>
+                    <p>Relaxant, suédois, ciblé. Je vous accueille à mon domicile.</p>
+                    <a href="#" class="site-btn">en savoir plus</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -39,9 +35,9 @@
                     <div class="ci-icon">
                         <i class="flaticon-001-meditation i-fix"></i>
                     </div>
-                    <span>Begginer & Advanced</span>
-                    <h4>Hatha</h4>
-                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                    <h4>Aromathérapie</h4>
+                    <p>Je vous conseille et vous guide dans votre bien-être.</p>
+                    <a href="#" class="site-btn">en savoir plus</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -49,9 +45,9 @@
                     <div class="ci-icon">
                         <i class="flaticon-021-yoga-mat"></i>
                     </div>
-                    <span>Begginer & Advanced</span>
-                    <h4>Pilates</h4>
-                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                    <h4>Massage AMMA assis</h4>
+                    <p>Je me déplace pour votre bien-être.</p>
+                    <a href="#" class="site-btn">en savoir plus</a>
                 </div>
             </div>
         </div>
@@ -173,12 +169,11 @@
                         <span>Begginer & Advanced</span>
                         <h4>Meditation Sessions</h4>
                     </div>
-                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
                     <h6>Information</h6>
                     <ul>
-                        <li>Main Str, no 23, New York</li>
-                        <li>+546 990221 123</li>
-                        <li>hosting@contact.com</li>
+                        <li><a href="http://www.facebook.com/lahaltebienetre">La Halte au Bien-Être sur Facebook</a></li>
+                        <li><a href="tel:0664054024">06.64.05.40.24</a></li>
+                        <li><a href="mailto:lahaltebienetre@gmail.com">lahaltebienetre@gmail.com</a></li>
                     </ul>
                 </div>
             </div>

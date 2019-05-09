@@ -11,6 +11,26 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('welcome', [
+        'current_page' => 'welcome'
+    ]);
+})->name('home');
+
+Route::resource('/tarifs', 'TarifsController', [
+    'except' => ['show']
+]);
+
+Route::get('qui-sommes-nous', function () {
+    return view('about', [
+        'current_page' => 'qui-sommes-nous'
+    ]);
+})->name('about');
+
+Route::get('prestations', function () {
+    return view('prestations', [
+        'current_page' => 'prestations'
+    ]);
+})->name('prestations');

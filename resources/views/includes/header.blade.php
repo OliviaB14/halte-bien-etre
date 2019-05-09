@@ -9,11 +9,11 @@
         <a href=""><i class="fa fa-twitter"></i></a>
     </div>
     <ul class="main-menu">
-        <li class="active"><a href="index.html">Accueil</a></li>
-        <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
-        <li><a href="nos-prestations.html">Mes prestations</a></li>
-        <li><a href="partenariats.html">Partenariats</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ route('home') }}">Accueil</a></li>
+        <li class="{{ $current_page == 'qui-sommes-nous' ? 'active' : '' }}"><a href="{{ route('about') }}">Qui sommes-nous</a></li>
+        <li class="{{ $current_page == 'prestations' ? 'active' : '' }}"><a href="{{ route('prestations') }}">Mes prestations</a></li>
+        <li class="{{ $current_page == 'partenariats' ? 'active' : '' }}"><a href="partenariats.html">Partenariats</a></li>
+        <li class="{{ $current_page == 'contact' ? 'active' : '' }}"><a href="contact.html">Contact</a></li>
     </ul>
 </header>
 <!-- Header section end -->

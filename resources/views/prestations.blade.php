@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('body')
-    <!-- Courses section -->
     <section class="cl-courses-section">
         <div class="container">
             <div class="row">
@@ -190,5 +189,4 @@
             </div>
         </div>
     </section>
-    <!-- Plans section end -->
 @endsection

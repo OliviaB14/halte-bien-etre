@@ -5,23 +5,18 @@
     <section class="page-info-section set-bg" data-setbg="img/page-top-bg/1.png">
         <img src="img/page-top-bg/page-info-img.png" alt="" class="page-info-img">
         <div class="container">
-            <h2>About us</h2>
+            <h2>Qui sommes-nous ?</h2>
             <div class="site-breadcrumb">
-                <a href="">Home</a> /
-                <span>About Us</span>
+                <a href="/">Accueil</a> /
+                <span>Qui sommes-nous ?</span>
             </div>
         </div>
     </section>
-    <!-- Page Info end -->
-
-
-    <!-- About section -->
     <section class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 order-2 order-lg-1 about-text">
                     <div class="sp-title">
-                        <span>Begginer & Advanced</span>
                         <h4>Mon Parcours</h4>
                     </div>
                     <p>
@@ -41,18 +36,13 @@
                         C’est donc avec plaisir et honneur que je vous accueille à mon domicile de Berneval-Le-Grand jusqu’au printemps 2019,
                         car ensuite, un projet immobilier m’attend, vous offrant ainsi une pièce plus grande et plus confortable pour vous servir.
                     </p>
-                    <a href="#" class="site-btn">lear more</a>
                 </div>
                 <div class="col-lg-6  order-1 order-lg-2">
-                    <img src="img/about-img.jpg" alt="">
+                    <img src="{{ asset('img/qui-sommes-nous/parcours.jpg') }}" alt="Cécile massothérapeuthe">
                 </div>
             </div>
         </div>
     </section>
-    <!-- About section end -->
-
-
-    <!-- About page section  -->
     <section class="ap-course-section">
         <div class="container">
             <div class="row">
