@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('body')
+    <section class="page-info-section set-bg" data-setbg="{{ asset('img/prestations.jpg') }}">
+        <div class="container">
+            <h2>Prestations</h2>
+            <div class="site-breadcrumb">
+                <a href="/">Accueil</a> /
+                <span>Prestations</span>
+            </div>
+        </div>
+    </section>
     <section class="cl-courses-section">
         <div class="container">
             <div class="row">
@@ -185,7 +194,7 @@
                 </div>
             </div>
             <div class="plan-icon text-center">
-                <img src="img/plans-icon.png" alt="">
+                <img src="{{ asset('img/logo-halte-01.png') }}" width="200" alt="">
             </div>
         </div>
     </section>

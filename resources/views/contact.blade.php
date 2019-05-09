@@ -66,13 +66,13 @@
                             <h4>Horaires de disponibilité</h4>
                         </div>
                         <ul>
-                            <li><span>Monday</span>09:30 AM -19:30 PM</li>
-                            <li><span>Tuesday</span>09:30 AM -19:30 PM</li>
-                            <li><span>Wednesday</span>09:30 AM -19:30 PM</li>
-                            <li><span>Thursday</span>09:30 AM -19:30 PM</li>
-                            <li><span>Friday</span>09:30 AM -19:30 PM</li>
-                            <li><span>Saturday</span>09:30 AM -16:30 PM</li>
-                            <li><span>Sunday</span>Closed</li>
+                            <li><span>Lundi</span>09:30 AM -19:30 PM</li>
+                            <li><span>Mardi</span>09:30 AM -19:30 PM</li>
+                            <li><span>Mercredi</span>09:30 AM -19:30 PM</li>
+                            <li><span>Jeudi</span>09:30 AM -19:30 PM</li>
+                            <li><span>Vendredi</span>09:30 AM -19:30 PM</li>
+                            <li><span>Samedi</span>09:30 AM -16:30 PM</li>
+                            <li><span>Dimanche</span>Indisponible</li>
                         </ul>
                     </div>
                 </div>
