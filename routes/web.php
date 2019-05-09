@@ -34,3 +34,15 @@ Route::get('prestations', function () {
         'current_page' => 'prestations'
     ]);
 })->name('prestations');
+
+Route::get('partenariats', function () {
+    return view('partnerships', [
+        'current_page' => 'partenariats'
+    ]);
+})->name('partenariats');
+
+Route::get('contact', function () {
+    return view('contact', [
+        'current_page' => 'contact'
+    ]);
+})->name('contact');
