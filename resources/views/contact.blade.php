@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('body')
-    <section class="page-info-section set-bg" data-setbg="img/page-top-bg/4.png">
+    <section class="page-info-section set-bg" data-setbg="{{ asset('img/contact.jpg') }}">
         <div class="container">
-            <h2>Blog</h2>
+            <h2 class="text-black-50">Contact</h2>
             <div class="site-breadcrumb">
-                <a href="">Home</a> /
-                <span>Blog</span>
+                <a href="/">Accueil</a> /
+                <span>Contact</span>
             </div>
         </div>
     </section>
@@ -16,35 +16,36 @@
                 <div class="col-lg-6">
                     <div class="contact-text">
                         <div class="sp-title">
-                            <span>Contact info</span>
-                            <h4>About us</h4>
+                            <h4>Votre bien-être est ma priorité</h4>
                         </div>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada.</p>
+                        <p>
+                            Formée à l’Institut de Formation en Médecines Douces de Petit-Quevilly, j’ai étudié ces médecines alternatives et complémentaires avec une grande passion.
+                        </p>
                         <h6>Information</h6>
                         <ul>
-                            <li>Main Str, no 23, New York</li>
-                            <li>+546 990221 123</li>
-                            <li>hosting@contact.com</li>
+                            <li><a href="http://www.facebook.com/lahaltebienetre">La Halte au Bien-Être sur Facebook</a></li>
+                            <li><a href="tel:0664054024">06.64.05.40.24</a></li>
+                            <li><a href="mailto:lahaltebienetre@gmail.com">lahaltebienetre@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="sp-title mb-0">
-                        <span>Contact info</span>
-                        <h4>Get in touch</h4>
+                        <span>Informations de contact</span>
+                        <h4>N'attendez-plus !</h4>
                     </div>
                     <form class="contact-form">
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Your name">
+                                <input type="text" placeholder="Votre nom">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" placeholder="Your email">
+                                <input type="email" placeholder="Votre adresse e-mail">
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Subject">
-                                <textarea placeholder="Message"></textarea>
-                                <button class="site-btn">send</button>
+                                <input type="text" placeholder="Votre message">
+                                <textarea placeholder="Votre message"></textarea>
+                                <button class="site-btn">envoyer</button>
                             </div>
                         </div>
                     </form>
@@ -62,8 +63,7 @@
                 <div class="col-lg-5 offset-lg-7">
                     <div class="timetable-box">
                         <div class="sp-title">
-                            <span>Begginer & Advanced</span>
-                            <h4>Working Hours</h4>
+                            <h4>Horaires de disponibilité</h4>
                         </div>
                         <ul>
                             <li><span>Monday</span>09:30 AM -19:30 PM</li>
