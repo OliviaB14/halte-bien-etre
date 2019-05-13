@@ -19,7 +19,7 @@
                             <h4>Votre bien-être est ma priorité</h4>
                         </div>
                         <p>
-                            Formée à l’Institut de Formation en Médecines Douces de Petit-Quevilly, j’ai étudié ces médecines alternatives et complémentaires avec une grande passion.
+                        Offrez - vous de la détente et vivez l' expérience d'un véritable massage avec Cécile, votre massothérapeute locale !
                         </p>
                         <h6>Information</h6>
                         <ul>
@@ -66,13 +66,11 @@
                             <h4>Horaires de disponibilité</h4>
                         </div>
                         <ul>
-                            <li><span>Lundi</span>09:30 AM -19:30 PM</li>
-                            <li><span>Mardi</span>09:30 AM -19:30 PM</li>
-                            <li><span>Mercredi</span>09:30 AM -19:30 PM</li>
-                            <li><span>Jeudi</span>09:30 AM -19:30 PM</li>
-                            <li><span>Vendredi</span>09:30 AM -19:30 PM</li>
-                            <li><span>Samedi</span>09:30 AM -16:30 PM</li>
-                            <li><span>Dimanche</span>Indisponible</li>
+                            <li><span>Lundi</span>10:00 - 19:00</li>
+                            <li><span>Mercredi</span>10:00 - 19:00</li>
+                            <li><span>Jeudi</span>10:00 - 19:00</li>
+                            <li><span>Vendredi</span>10:00 - 19:00</li>
+                            <li><span>Samedi</span>10:00 - 19:00</li>
                         </ul>
                     </div>
                 </div>
