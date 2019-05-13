@@ -6,13 +6,12 @@
     <div class="hero-content-warp">
         <div class="container">
             <div class="hero-content">
-                <img src="img/hero-icon.png" alt="">
-                <h2>La <span>Halte</span> au bien-être</h2>
+                <h2>La <span>Halte</span><br> au Bien-être</h2>
                 <p>Massages bien-être relaxant, décontractant et énergisant.</p>
                 <a href="#" class="site-btn">discover</a>
             </div>
         </div>
-        <img src="img/hero-img.png" class="hero-img" alt="">
+        <img src="{{ asset('img/home-design.png') }}" class="hero-img" alt="">
     </div>
 </section>
 

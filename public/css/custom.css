@@ -1,0 +1,49 @@
+.carousel {
+    width: 830px;
+    height: 120px;
+    overflow: hidden;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #999;
+    box-shadow: 0 0 4px #000;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.holder {
+    -webkit-animation: carousel 25s linear infinite;
+    animation: carousel 25s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+}
+.holder:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+@-webkit-keyframes carousel {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes carousel {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}

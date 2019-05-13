@@ -21,6 +21,7 @@
 
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
 
 
     <!--[if lt IE 9]>
