@@ -1,14 +1,17 @@
 .carousel {
-    width: 830px;
-    height: 120px;
+    height: 300px;
     overflow: hidden;
     padding: 8px;
     box-sizing: border-box;
-    border: 2px solid #999;
-    box-shadow: 0 0 4px #000;
+    border-bottom: 20px solid #bf92ce;
+    border-top: 20px solid #bf92ce;
     margin: 0 auto;
-    border-radius: 5px;
 }
+.carousel img {
+    height: 250px;
+    width: auto;
+}
+
 .holder {
     -webkit-animation: carousel 25s linear infinite;
     animation: carousel 25s linear infinite;

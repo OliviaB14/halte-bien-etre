@@ -5,7 +5,7 @@
 
     <section class="page-info-section set-bg" data-setbg="img/page-top-bg/3.png">
         <div class="container">
-            <h2>Blog</h2>
+            <h2>Partenariats</h2>
             <div class="site-breadcrumb">
                 <a href="/">Accueil</a> /
                 <span>Partenariats</span>
@@ -15,22 +15,15 @@
 
     <section class="blog-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <h5>Merci à eux!</h5>
                     <div class="carousel">
                         <div class="holder">
                             <img src="{{ asset('img/partners/florixir.jpg') }}" alt="" />
-                            <img src="http://fakeimg.pl/300x200" alt="" />
-                            <img src="http://fakeimg.pl/400x300" alt="" />
-                            <img src="http://fakeimg.pl/200x100" alt="" />
-                            <img src="http://fakeimg.pl/500x400" alt="" />
-                            <img src="http://fakeimg.pl/210x105" alt="" />
-                            <img src="http://fakeimg.pl/200x100" alt="" />
-                            <img src="http://fakeimg.pl/250x150" alt="" />
-                            <img src="http://fakeimg.pl/200x100" alt="" />
-                            <img src="http://fakeimg.pl/200x100" alt="" />
-                            <img src="http://fakeimg.pl/200x100" alt="" />
-                            <img src="http://fakeimg.pl/200x100" alt="" />
+                            <img src="{{ asset('img/partners/fcn.jpg') }}" alt="" />
+                            <img src="{{ asset('img/partners/orange-bleue.jpg') }}" alt="" />
+                            <img src="{{ asset('img/partners/bragance.jpg') }}" alt="" />
                         </div>
                     </div>
                 </div>
