@@ -83,45 +83,48 @@
             <div class="col-lg-5 col-md-9">
                 <div class="timetable-box">
                     <div class="sp-title">
-                        <span>Begginer & Advanced</span>
-                        <h4>Working Hours</h4>
+                        <h4>Horaires de disponibilité</h4>
                     </div>
                     <ul>
-                        <li><span>Monday</span>09:30 AM -19:30 PM</li>
-                        <li><span>Tuesday</span>09:30 AM -19:30 PM</li>
-                        <li><span>Wednesday</span>09:30 AM -19:30 PM</li>
-                        <li><span>Thursday</span>09:30 AM -19:30 PM</li>
-                        <li><span>Friday</span>09:30 AM -19:30 PM</li>
-                        <li><span>Saturday</span>09:30 AM -16:30 PM</li>
-                        <li><span>Sunday</span>Closed</li>
+                        <li><span>Lundi</span>10:00 - 19:00</li>
+                        <li><span>Mercredi</span>10:00 - 19:00</li>
+                        <li><span>Jeudi</span>10:00 - 19:00</li>
+                        <li><span>Vendredi</span>10:00 - 19:00</li>
+                        <li><span>Samedi</span>10:00 - 19:00</li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-7">
-                <div class="timetable-text">
+                <div class="timetable-text" style="padding-top: 20px;">
                     <div class="sp-title">
-                        <span>Begginer & Advanced</span>
-                        <h4>Meditation Sessions</h4>
+                        <span>La boutique</span>
+                        <h4>Des petits prix, pour vous</h4>
                     </div>
-                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
-                    <div class="site-progress-bars">
-                        <div class="progress-item">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span>60%</span></div>
-                            </div>
-                            <p>Breathing</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="list-unstyled">
+                                <a href="https://www.facebook.com/pg/lahaltebienetre/shop/?ref=page_internal" target="_blank">
+                                    <li class="media">
+                                        <img src="{{ asset('img/products/eau-micellaire-bio.jpg') }}" class="mr-3 shadow" width="150px" alt="...">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 mb-1">Eau micellaire bio</h5>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="https://www.facebook.com/pg/lahaltebienetre/shop/?ref=page_internal" target="_blank">
+                                    <li class="media my-4">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 mb-1">Stick inhalateur aux huiles essentielles</h5>
+                                            <p>Confection d'un stick inhalateur selon votre problématique (fatigue, manque d'energie, stick hiver, détente...)</p><p>Envoi possible en lettre bulle dans toutes la France !</p>
+                                        </div>
+                                        <img src="{{ asset('img/products/default.png') }}" width="150px" class="ml-3 shadow" alt="...">
+                                    </li>
+                                </a>
+                            </ul>
                         </div>
-                        <div class="progress-item">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span>87%</span></div>
-                            </div>
-                            <p>Meditation</p>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
-                            </div>
-                            <p>Flexibility</p>
+                        <div class="col-12">
+                            <a href="https://www.facebook.com/pg/lahaltebienetre/shop/?ref=page_internal" class="btn btn-block text-uppercase" id="boutique-btn"><i class="fa fa-eye mr-3"></i>Voir les autres produits</a>
                         </div>
                     </div>
                 </div>
@@ -139,14 +142,19 @@
     <div class="container">
         <div class="sp-title text-white text-center">
             <img src="img/quota.png" alt="">
-            <span>Begginer & Advanced</span>
-            <h4>Meditation Sessions</h4>
+            <span>Vos avis et vos retours</span>
+            <h4>Vous en parlez le mieux</h4>
         </div>
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="testimonial-content">
-                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in fauci-bus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
-                    <h6>Maria Smith</h6>
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarc.arnoult%2Fposts%2F2316417905045465&width=500" width="500" height="161" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    <a href="https://www.facebook.com/pg/lahaltebienetre/reviews/?ref=page_internal">
+                        <h6>
+                            <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png" alt="" width="34">
+                            La Halte au Bien-Être est sur Facebook
+                        </h6>
+                    </a>
                     <span>Customer</span>
                 </div>
             </div>

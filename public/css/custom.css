@@ -47,3 +47,10 @@
         transform: translateX(0);
     }
 }
+
+
+#boutique-btn {
+    background:#f7ffa0;
+    font-weight: bold;
+    padding:10px;
+}
