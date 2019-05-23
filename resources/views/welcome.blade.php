@@ -124,10 +124,9 @@
                     <a href="https://www.facebook.com/pg/lahaltebienetre/reviews/?ref=page_internal">
                         <h6>
                             <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png" alt="" width="34">
-                            La Halte au Bien-Être est sur Facebook
+                            La Halte Bien-Être est sur Facebook
                         </h6>
                     </a>
-                    <span>Customer</span>
                 </div>
             </div>
         </div>

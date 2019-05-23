@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>La Halte au Bien-être</title>
+    <title>La Halte Bien-être</title>
     <meta charset="UTF-8">
     <meta name="description" content="Centre de bien-être">
     <meta name="keywords" content="Yoga, html, bien-être, massages, cure">

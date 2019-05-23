@@ -23,7 +23,7 @@
                         </p>
                         <h6>Information</h6>
                         <ul>
-                            <li><a href="http://www.facebook.com/lahaltebienetre">La Halte au Bien-Être sur Facebook</a></li>
+                            <li><a href="http://www.facebook.com/lahaltebienetre">La Halte Bien-Être sur Facebook</a></li>
                             <li><a href="tel:0664054024">06.64.05.40.24</a></li>
                             <li><a href="mailto:lahaltebienetre@gmail.com">lahaltebienetre@gmail.com</a></li>
                         </ul>
