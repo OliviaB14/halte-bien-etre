@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Settings;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('auth.dashboard');
+    }
+
+    public function dashboard()
+    {
+        $settings = Settings::find(1);
+        return view('auth.dashboard', [
+            'settings' => $settings
+        ]);
     }
 }

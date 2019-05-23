@@ -51,3 +51,4 @@ Route::get('contact', function () {
 Auth::routes();
 
 Route::get('/réglages', 'HomeController@index')->name('home');
+Route::get('/tableau-de-bord', 'HomeController@dashboard')->name('dashboard');
