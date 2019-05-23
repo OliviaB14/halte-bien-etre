@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -46,3 +47,7 @@ Route::get('contact', function () {
         'current_page' => 'contact'
     ]);
 })->name('contact');
+
+Auth::routes();
+
+Route::get('/réglages', 'HomeController@index')->name('home');
