@@ -55,8 +55,8 @@
                                         <input class="form-control col-sm-3" name="{{$day->day}}[]" type="text" value="{{$day->closeTime}}"/>
                                     </div>
                                     @endforeach
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                                    <div class="form-group row justify-content-around my-1 text-center">
+                                        <label for="exampleFormControlTextarea1">{{$conatct->}}</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
                                     <button class="btn btn-success" type="submit">Valider les changements</button>
