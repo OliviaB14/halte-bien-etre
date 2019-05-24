@@ -34,26 +34,27 @@
                                             <input type="file" class="form-control-file" id="logoPath" name="logoPath">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Example select</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-md-12 my-3">
+                                            <h3>Horaires d'ouverture</h3>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect2">Example multiple select</label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+
+                                    <div class="form-group row justify-content-around my-1 text-center font-weight-bold text-uppercase bg-dark text-white p-2">
+                                        <div class="col-sm-2">Jour</div>
+                                        <div class="col-sm-4">Disponible ?</div>
+                                        <div class="col-sm-4">Horaires</div>
                                     </div>
+                                    @foreach($openHours as $day)
+                                    <div class="form-group row justify-content-around my-1 text-center">
+                                        <label class="col-sm-3 font-weight-bold">{{$day->day}}</label>
+                                        <div class="col-sm-3">
+                                            <input type="checkbox" class="mx-5" name="{{$day->day}}[]" {{$day->open ? 'checked' : ''}}>
+                                        </div>
+                                        <input class="form-control col-sm-3" name="{{$day->day}}[]" type="text" value="{{$day->openTime}}"/>
+                                        <input class="form-control col-sm-3" name="{{$day->day}}[]" type="text" value="{{$day->closeTime}}"/>
+                                    </div>
+                                    @endforeach
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Example textarea</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>

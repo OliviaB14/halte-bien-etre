@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\OpenHours;
 use App\Settings;
 use Illuminate\Http\Request;
 
@@ -30,8 +31,10 @@ class HomeController extends Controller
     public function dashboard()
     {
         $settings = Settings::find(1);
+        $openHours = OpenHours::all();
         return view('auth.dashboard', [
-            'settings' => $settings
+            'settings' => $settings,
+            'openHours' => $openHours,
         ]);
     }
 }
