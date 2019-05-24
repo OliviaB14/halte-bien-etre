@@ -6,7 +6,7 @@
     <div class="hero-content-warp">
         <div class="container">
             <div class="hero-content">
-                <h2>La <span>Halte</span><br> au Bien-être</h2>
+                <h2>La <span>Halte</span><br> Bien-être</h2>
                 <p>Massages bien-être relaxant, décontractant et énergisant.</p>
                 <a href="#" class="site-btn">discover</a>
             </div>
