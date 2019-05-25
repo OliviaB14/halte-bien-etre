@@ -15,8 +15,8 @@
     <section class="blog-section">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <h3>{{$infos->body}}</h3>
+                <div class="col-md-12 text-center">
+                    <h3 class="my-4">{{$infos->body}}</h3>
                     <div class="row">
                         @foreach($partners as $partner)
                         <div class="col">
