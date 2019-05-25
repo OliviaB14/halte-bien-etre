@@ -1883,3 +1883,8 @@
         transform: translateY(0);
     }
 }
+
+.dashboard-bg {
+    background: url('https://source.unsplash.com/oBb-Y26PJgg') no-repeat top;
+    background-size: cover;
+}
