@@ -1764,7 +1764,7 @@
 .tabs {
     background: #eee;
     margin: 0 auto;
-    max-width: 600px;
+    /*max-width: 600px;*/
     overflow: hidden;
     position: relative;
 }
@@ -1798,7 +1798,7 @@
     transform: translateX(-50%) scaleX(1);
 }
 .tabs__underline {
-    width: 33%;
+    width: 25%;
     background: #E91E63;
     height: 4px;
     position: absolute;

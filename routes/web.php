@@ -13,6 +13,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\PagesSettings as Pages;
 
 Route::get('/', function () {
     return view('welcome', [
@@ -25,8 +26,12 @@ Route::resource('/tarifs', 'TarifsController', [
 ]);
 
 Route::get('qui-sommes-nous', function () {
+    $monParcours = Pages::where('pageTitle', 'qui-sommes-nous')
+        ->where('section', 'monParcours')
+        ->first();
     return view('about', [
-        'current_page' => 'qui-sommes-nous'
+        'current_page' => 'qui-sommes-nous',
+        'monParcours' => $monParcours,
     ]);
 })->name('about');
 
@@ -52,3 +57,7 @@ Auth::routes();
 
 Route::get('/réglages', 'HomeController@index')->name('home');
 Route::get('/tableau-de-bord', 'HomeController@dashboard')->name('dashboard');
+
+Route::get('/nouveau-service', function() {
+    return view('controllers.newService');
+})->name('newService');

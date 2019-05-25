@@ -10,7 +10,7 @@
     </div>
     @isset($current_page)
     <ul class="main-menu">
-        <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ route('home') }}">Accueil</a></li>
+        <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Accueil</a></li>
         <li class="{{ $current_page == 'qui-sommes-nous' ? 'active' : '' }}"><a href="{{ route('about') }}">Qui sommes-nous</a></li>
         <li class="{{ $current_page == 'prestations' ? 'active' : '' }}"><a href="{{ route('prestations') }}">Mes prestations</a></li>
         <li class="{{ $current_page == 'partenariats' ? 'active' : '' }}"><a href="{{ route('partenariats') }}">Partenariats</a></li>

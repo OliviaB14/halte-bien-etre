@@ -55,7 +55,6 @@ $(window).on('load', function() {
 	--------------------*/
 	$('.gallery-slider').owlCarousel({
         loop: true,
-        margin: 0,
         nav: false,
 		dots: false,
 		margin: 0,

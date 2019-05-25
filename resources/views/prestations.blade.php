@@ -13,6 +13,9 @@
     <section class="cl-courses-section">
         <div class="container">
             <div class="row">
+                <div class="col-sm-12">
+                    <p>Vous trouverez ici mes prestations.</p>
+                </div>
                 <div class="col-md-4">
                     <div class="course-item">
                         <div class="ci-icon">

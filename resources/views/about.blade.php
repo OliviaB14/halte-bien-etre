@@ -19,23 +19,7 @@
                     <div class="sp-title">
                         <h4>Mon Parcours</h4>
                     </div>
-                    <p>
-                        Formée à l’Institut de Formation en Médecines Douces de Petit-Quevilly,
-                        j’ai étudié ces médecines alternatives et complémentaires avec une grande passion.
-                        J’ai notamment été certifiée en :
-                    </p>
-                    <ul>
-                        <li>Phytothérapie</li>
-                        <li>Aromathérapie</li>
-                        <li>Fleurs de Bach</li>
-                        <li>Apithérapie</li>
-                        <li>Massages bien-être (sur table & massage AMMA assis)</li>
-                    </ul>
-                    <p></p>
-                    <p>
-                        C’est donc avec plaisir et honneur que je vous accueille à mon domicile de Berneval-Le-Grand jusqu’au printemps 2019,
-                        car ensuite, un projet immobilier m’attend, vous offrant ainsi une pièce plus grande et plus confortable pour vous servir.
-                    </p>
+                    <div>{!! $monParcours->body !!}</div>
                 </div>
                 <div class="col-lg-6  order-1 order-lg-2">
                     <img src="{{ asset('img/qui-sommes-nous/parcours.jpg') }}" alt="Cécile massothérapeuthe">

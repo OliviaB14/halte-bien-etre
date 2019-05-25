@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css"/>
     <link rel="stylesheet" href="css/flaticon.css"/>
     <link rel="stylesheet" href="css/slicknav.min.css"/>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="css/style.css"/>
@@ -47,8 +48,38 @@
 <script src="js/jquery.slicknav.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/circle-progress.min.js"></script>
+<script src="http://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 <script src="js/main.js"></script>
 
+<script>
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['blockquote', 'code-block'],
+
+        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        [{ 'font': [] }],
+        [{ 'align': [] }],
+
+        ['clean']                                         // remove formatting button
+    ];
+    var options = {
+        theme: 'snow',
+        modules: {
+            toolbar: toolbarOptions
+        },
+    };
+    var monParcours = new Quill('#monParcours', options);
+    var mesPrestationsDescription = new Quill('#mesPrestationsDescription', options);
+    var serviceEditor = new Quill('.serviceEditor', options);
+</script>
 
 </body>
 
