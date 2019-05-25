@@ -11,6 +11,8 @@
 |
 */
 
+use App\ContactSettings;
+use App\OpenHours;
 use App\Partners;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -53,7 +55,18 @@ Route::get('partenariats', function () {
 })->name('partenariats');
 
 Route::get('contact', function () {
+    $email = ContactSettings::where('label', 'email')->first()->value;
+    $telephone = ContactSettings::where('label', 'telephone')->first()->value;
+    $facebook = ContactSettings::where('label', 'facebook')->first()->value;
+    $presentation = ContactSettings::where('label', 'presentation')->first()->value;
+
+    $openHours = OpenHours::where('open', 1)->get();
     return view('contact', [
+        'facebook' => $facebook,
+        'presentation' => $presentation,
+        'telephone' => $telephone,
+        'email' => $email,
+        'openHours' => $openHours,
         'current_page' => 'contact'
     ]);
 })->name('contact');

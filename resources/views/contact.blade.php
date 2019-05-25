@@ -18,14 +18,12 @@
                         <div class="sp-title">
                             <h4>Votre bien-être est ma priorité</h4>
                         </div>
-                        <p>
-                        Offrez - vous de la détente et vivez l' expérience d'un véritable massage avec Cécile, votre massothérapeute locale !
-                        </p>
+                        <p>{{$presentation}}</p>
                         <h6>Information</h6>
                         <ul>
-                            <li><a href="http://www.facebook.com/lahaltebienetre">La Halte Bien-Être sur Facebook</a></li>
-                            <li><a href="tel:0664054024">06.64.05.40.24</a></li>
-                            <li><a href="mailto:lahaltebienetre@gmail.com">lahaltebienetre@gmail.com</a></li>
+                            <li><a href="{{$facebook}}">La Halte Bien-Être sur Facebook</a></li>
+                            <li><a href="tel:{{$telephone}}">{{$telephone}}</a></li>
+                            <li><a href="mailto:{{$email}}">{{$email}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,11 +64,9 @@
                             <h4>Horaires de disponibilité</h4>
                         </div>
                         <ul>
-                            <li><span>Lundi</span>10:00 - 19:00</li>
-                            <li><span>Mercredi</span>10:00 - 19:00</li>
-                            <li><span>Jeudi</span>10:00 - 19:00</li>
-                            <li><span>Vendredi</span>10:00 - 19:00</li>
-                            <li><span>Samedi</span>10:00 - 19:00</li>
+                            @foreach($openHours as $day)
+                            <li><span>{{$day->day}}</span>{{date('H:i',strtotime($day->openTime))}} - {{date('H:i',strtotime($day->closeTime))}}</li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
