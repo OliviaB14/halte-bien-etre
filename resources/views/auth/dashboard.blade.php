@@ -76,14 +76,25 @@
                                     <h3>Mes prestations</h3>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row text-center">
                                 @foreach($mesPrestations as $section)
-                                    <label class="col-sm-3 col-form-label">{{$section->section}}</label>
+                                    <label class="col-sm-3 col-form-label text-capitalize">{{$section->section}}</label>
                                     <div class="col-sm-9">
                                         <div id="mesPrestationsDescription">{!! $section->body !!}</div>
                                     </div>
                                 @endforeach
                             </div>
+                            <div class="row">
+                                <div class="col-md-12 my-3">
+                                    <h3>Partenariats</h3>
+                                </div>
+                            </div>
+                            @foreach($partenariats as $info)
+                                <div class="form-group row justify-content-around my-1 text-center">
+                                    <label class="col-sm-3 col-form-label text-capitalize">{{$info->section}}</label>
+                                    <textarea class="form-control col-sm-9" name="{{$info->section}}" type="text">{{$info->body}}</textarea>
+                                </div>
+                            @endforeach
                             <div class="row">
                                 <div class="col-md-12 my-3">
                                     <h3>Contact</h3>
@@ -140,11 +151,39 @@
                                 </div>
                             </div>
                             @endforeach
+                            <button class="btn btn-success mt-3" type="submit">Valider les changements</button>
                         </form>
                     </article>
                     <article class="tabs__content js-tabs-content" id="tab-4">
-                        <h2 class="tabs__content--title">Title for tab 3</h2>
-                        <p class="tabs__content--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan turpis vel justo condimentum finibus. Praesent vitae nisl sed sem euismod rhoncus nec eu augue. Maecenas et diam quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan turpis vel justo condimentum finibus. Praesent vitae nisl sed sem euismod rhoncus nec eu augue. Maecenas et diam quam</p>
+                        <form id="partnersSettings" method="post">
+                            <div class="row">
+                                <div class="col-md-12 my-3">
+                                    <h3>Partenaires</h3>
+                                </div>
+                            </div>
+                            @foreach($partners as $partner)
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        @isset($partner->logoPath)
+                                            <img src="{{$partner->logoPath}}" alt="{{$partner->name}}" class="img-fluid">
+                                        @endisset
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group row my-1 text-center justify-content-end">
+                                            <label class="col-sm-6 col-form-label text-capitalize">Nom</label>
+                                            <input class="form-control col-sm-6" name="partnersNames" type="text" value="{{$partner->name}}"/>
+
+                                            <label class="col-sm-6 col-form-label text-capitalize my-5">Logo du partenaire</label>
+                                            <div class="custom-file col-sm-6 my-5">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <button class="btn btn-success mt-3" type="submit">Valider les changements</button>
+                        </form>
                     </article>
                 </section>
             </div>
