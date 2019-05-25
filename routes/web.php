@@ -11,6 +11,7 @@
 |
 */
 
+use App\Partners;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\PagesSettings as Pages;
@@ -42,7 +43,11 @@ Route::get('prestations', function () {
 })->name('prestations');
 
 Route::get('partenariats', function () {
+    $partners = Partners::all();
+    $infos = Pages::where('pageTitle', 'partenariats')->first();
     return view('partnerships', [
+        'partners' => $partners,
+        'infos' => $infos,
         'current_page' => 'partenariats'
     ]);
 })->name('partenariats');
