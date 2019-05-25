@@ -21,6 +21,7 @@
                         @foreach($partners as $partner)
                         <div class="col">
                             <img src="{{ $partner->logoPath }}" alt="" />
+                            <p class="font-weight-bold">{{$partner->name}}</p>
                         </div>
                         @endforeach
                     </div>
