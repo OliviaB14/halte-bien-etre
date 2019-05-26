@@ -27,49 +27,12 @@
             </div>
         </div>
     </section>
-    <section class="ap-course-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="ap-course-item">
-                        <div class="ci-icon">
-                            <i class="flaticon-002-yin-yang"></i>
-                        </div>
-                        <div class="ci-content">
-                            <span>Begginer & Advanced</span>
-                            <h4>Yoga</h4>
-                            <p>Etiam pretium, nibh vitae varius ultr icies, tellus diam gravida elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="ap-course-item">
-                        <div class="ci-icon">
-                            <i class="flaticon-001-meditation"></i>
-                        </div>
-                        <div class="ci-content">
-                            <span>Begginer & Advanced</span>
-                            <h4>Hatha</h4>
-                            <p>Etiam pretium, nibh vitae varius ultr icies, tellus diam gravida elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="ap-course-item">
-                        <div class="ci-icon">
-                            <i class="flaticon-021-yoga-mat"></i>
-                        </div>
-                        <div class="ci-content">
-                            <span>Begginer & Advanced</span>
-                            <h4>Pilates</h4>
-                            <p>Etiam pretium, nibh vitae varius ultr icies, tellus diam gravida elit.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <div class="row">
+        <div class="col">
+            <img src="{{ asset('') }}">
         </div>
-    </section>
-    <!-- About page section end -->
+    </div>
 
 
     <!-- Appointment section -->

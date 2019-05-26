@@ -7,8 +7,7 @@
         <div class="container">
             <div class="hero-content">
                 <h2>La <span>Halte</span><br> Bien-être</h2>
-                <p>Massages bien-être relaxant, décontractant et énergisant.</p>
-                <a href="#" class="site-btn">discover</a>
+                <p class="my-5">{{$settings->slogan}}</p>
             </div>
         </div>
         <img src="{{ asset('img/home-design.png') }}" class="hero-img" alt="">
@@ -17,37 +16,17 @@
 
 <section class="courses-section">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="course-item">
+        <div class="row justify-content-center align-items-center">
+            @foreach($services as $service)
+                <div class="col h-100 course-item">
                     <div class="ci-icon">
-                        <i class="flaticon-002-yin-yang"></i>
+                        <i class="{{$service->imagePath}}"></i>
                     </div>
-                    <h4>Massages</h4>
-                    <p>Relaxant, suédois, ciblé. Je vous accueille à mon domicile.</p>
-                    <a href="#" class="site-btn">en savoir plus</a>
+                    <h4>{{$service->title}}</h4>
+                    <span class="serviceLength">{{$service->length}} min</span> {!! Str::limit($service->description,100) !!}
+                    <a href="{{ route('prestations') }}" class="site-btn">en savoir plus</a>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="course-item">
-                    <div class="ci-icon">
-                        <i class="flaticon-001-meditation i-fix"></i>
-                    </div>
-                    <h4>Aromathérapie</h4>
-                    <p>Je vous conseille et vous guide dans votre bien-être.</p>
-                    <a href="#" class="site-btn">en savoir plus</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="course-item">
-                    <div class="ci-icon">
-                        <i class="flaticon-021-yoga-mat"></i>
-                    </div>
-                    <h4>Massage AMMA assis</h4>
-                    <p>Je me déplace pour votre bien-être.</p>
-                    <a href="#" class="site-btn">en savoir plus</a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -61,11 +40,9 @@
                         <h4>Horaires de disponibilité</h4>
                     </div>
                     <ul>
-                        <li><span>Lundi</span>10:00 - 19:00</li>
-                        <li><span>Mercredi</span>10:00 - 19:00</li>
-                        <li><span>Jeudi</span>10:00 - 19:00</li>
-                        <li><span>Vendredi</span>10:00 - 19:00</li>
-                        <li><span>Samedi</span>10:00 - 19:00</li>
+                        @foreach($openHours as $day)
+                            <li><span>{{$day->day}}</span>{{date('H:i',strtotime($day->openTime))}} - {{date('H:i',strtotime($day->closeTime))}}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

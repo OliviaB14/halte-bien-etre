@@ -57,3 +57,12 @@
     font-weight: bold;
     padding:10px;
 }
+
+.serviceLength {
+    background: #24465d;
+    padding: 10px;
+    color:white !important;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}

@@ -14,15 +14,23 @@
 use App\ContactSettings;
 use App\OpenHours;
 use App\Partners;
+use App\Services;
+use App\Settings;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\PagesSettings as Pages;
 
 Route::get('/', function () {
+    $openHours = OpenHours::where('open', 1)->get();
+    $settings = Settings::find(1);
+    $services = Services::all();
     return view('welcome', [
+        'openHours' => $openHours,
+        'settings' => $settings,
+        'services' => $services,
         'current_page' => 'welcome'
     ]);
-})->name('home');
+})->name('welcome');
 
 Route::resource('/tarifs', 'TarifsController', [
     'except' => ['show']
@@ -79,3 +87,4 @@ Route::get('/tableau-de-bord', 'HomeController@dashboard')->name('dashboard');
 Route::get('/nouveau-service', function() {
     return view('controllers.newService');
 })->name('newService');
+
