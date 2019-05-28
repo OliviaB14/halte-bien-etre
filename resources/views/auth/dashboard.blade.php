@@ -161,6 +161,13 @@
                                     <h3>Partenaires</h3>
                                 </div>
                             </div>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-6 my-4">
+                                    <a href="{{ route('newPartner') }}" class="btn btn-block btn-outline-secondary">
+                                        Ajouter un partenaire
+                                    </a>
+                                </div>
+                            </div>
                             @foreach($partners as $partner)
                                 <div class="row">
                                     <div class="col-sm-4">
