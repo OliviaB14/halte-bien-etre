@@ -88,8 +88,13 @@ Route::get('/nouveau-service', function() {
     return view('controllers.newService');
 })->name('newService');
 
-Route::get('/nouveau-partenaire', function() {
-    return view('controllers.newPartner');
+Route::get('/partenaire/{id?}', function($id = null) {
+    if($id == null) {
+        return view('controllers.newPartner');
+    } else {
+        $partner = Partners::find($id);
+        return view('controllers.newPartner', ['partner' => $partner]);
+    }
 })->name('newPartner');
 
 Route::post('/newPartner', 'DashboardController@newPartner')

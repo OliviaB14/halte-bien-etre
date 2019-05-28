@@ -176,16 +176,9 @@
                                         @endisset
                                     </div>
                                     <div class="col-sm-8">
-                                        <div class="form-group row my-1 text-center justify-content-end">
-                                            <label class="col-sm-6 col-form-label text-capitalize">Nom</label>
-                                            <input class="form-control col-sm-6" name="partnersNames" type="text" value="{{$partner->name}}"/>
-
-                                            <label class="col-sm-6 col-form-label text-capitalize my-5">Logo du partenaire</label>
-                                            <div class="custom-file col-sm-6 my-5">
-                                                <input type="file" class="custom-file-input" id="customFile">
-                                                <label class="custom-file-label" for="customFile">Choose file</label>
-                                            </div>
-                                        </div>
+                                        <p>{{$partner->name}}</p>
+                                        @isset($partner->link) <p>{{$partner->link}}</p>@endisset
+                                        <a href="{{ route('newPartner', ['id' => $partner->id]) }}" class="btn btn-primary"><i class="fa fa-edit mr-4"></i>Modifier le partenaire</a>
                                     </div>
                                 </div>
                             @endforeach

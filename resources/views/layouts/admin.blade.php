@@ -7,22 +7,22 @@
     <meta name="keywords" content="Yoga, html, bien-être, massages, cure">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <link href="{{asset('img/favicon.ico')}}" rel="shortcut icon"/>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="css/flaticon.css"/>
-    <link rel="stylesheet" href="css/slicknav.min.css"/>
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css') }}"/>
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css') }}"/>
+    <link rel="stylesheet" href="{{asset('css/flaticon.css') }}"/>
+    <link rel="stylesheet" href="{{asset('css/slicknav.min.css') }}"/>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/custom.css"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}"/>
 
 
     <!--[if lt IE 9]>
@@ -43,13 +43,13 @@
 @yield('body')
 
 <!--====== Javascripts & Jquery ======-->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.slicknav.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/circle-progress.min.js"></script>
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/circle-progress.min.js') }}"></script>
 <script src="http://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-<script src="js/main.js"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 
 <script>
     var toolbarOptions = [

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Partners;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -13,16 +12,22 @@ class DashboardController extends Controller
         $validated = $request->validate([
             'partnerName' => 'required|max:255',
             'partnerLink' => 'nullable|max:255',
-            'logoPath' => 'required',
+            'logoPath' => 'required|nullable|image',
         ]);
 
-        //dd(storage_path());
+        if($request->has('partnerId')) {
+            $partner = Partners::find($request->has('partnerId'));
+        } else {
+            $partner = new Partners();
+        }
+
+        if($validated['logoPath'] != null) {
+            $partner->logoPath = "storage/".$request->file('logoPath')->store('mypartners');
+        }
 
         try {
-            $partner = new Partners();
             $partner->name = $validated['partnerName'];
             $partner->link = $validated['partnerLink'];
-            $partner->logoPath = "storage/".$request->file('logoPath')->store('mypartners');
             $partner->save();
             return redirect()->to('tableau-de-bord');
         } catch (\Exception $e) {
