@@ -105,3 +105,6 @@ Route::post('/settings', 'DashboardController@general')
 
 Route::post('/pages', 'DashboardController@pages')
     ->name('pages.post');
+
+Route::post('/services', 'DashboardController@services')
+    ->name('services.post');

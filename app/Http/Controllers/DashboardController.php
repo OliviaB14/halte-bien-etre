@@ -6,6 +6,7 @@ use App\ContactSettings;
 use App\OpenHours;
 use App\PagesSettings;
 use App\Partners;
+use App\Services;
 use App\Settings;
 use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
@@ -99,5 +100,24 @@ class DashboardController extends Controller
         $description->save();
 
         return redirect()->to('tableau-de-bord');
+    }
+
+    public function services(Request $request)
+    {
+        $services = Services::all();
+
+        foreach ($services as $service){
+            $service->title = $request->get('serviceTitle'.$service->id);
+            $service->price = $request->get('servicePrice'.$service->id);
+            $service->length = $request->get('serviceLength'.$service->id);
+            $service->description = $request->get('serviceDescription'.$service->id);
+            $service->save();
+        }
+        return redirect()->to('tableau-de-bord');
+    }
+
+    public function service(Request $request, $id = null) {
+        $service = Services::find($id);
+
     }
 }

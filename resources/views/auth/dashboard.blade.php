@@ -117,25 +117,26 @@
                                 </a>
                             </div>
                         </div>
-                        <form id="servicesSettings" method="post">
+                        <form id="servicesSettings" method="post" action="{{ route('services.post') }}">
+                            @csrf
                             @foreach($services as $service)
                             <div class="form-group row">
                                 <div class="col-sm-1 font-weight-bold text-center py-4">{{ $loop->index }}.</div>
                                 <div class="col-sm-5">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <input class="form-control" value="{{$service->title}}"/>
+                                            <input class="form-control" name="serviceTitle{{$service->id}}" value="{{$service->title}}"/>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-group col-sm-6">
-                                            <input type="number" class="form-control" value="{{$service->price}}">
+                                            <input type="number" class="form-control" name="servicePrice{{$service->id}}" value="{{$service->price}}">
                                             <div class="input-group-append">
                                                 <span class="input-group-text">€</span>
                                             </div>
                                         </div>
                                         <div class="input-group col-sm-6">
-                                            <input type="number" step="1" min="5" class="form-control" value="{{$service->length}}">
+                                            <input type="number" step="1" min="5" class="form-control" value="{{$service->length}}" name="serviceLength{{$service->id}}">
                                             <div class="input-group-append">
                                                 <span class="input-group-text">minutes</span>
                                             </div>
@@ -145,7 +146,7 @@
                                 <div class="col-sm-6">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <textarea class="form-control" name="serviceEditor[]">{{$service->description}}</textarea>
+                                            <textarea class="form-control" name="serviceDescription{{$service->id}}">{{$service->description}}</textarea>
                                         </div>
                                     </div>
                                 </div>
