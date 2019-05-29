@@ -10,6 +10,7 @@ use App\Services;
 use App\Settings;
 use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
+use mysql_xdevapi\Exception;
 
 class DashboardController extends Controller
 {
@@ -116,8 +117,27 @@ class DashboardController extends Controller
         return redirect()->to('tableau-de-bord');
     }
 
-    public function service(Request $request, $id = null) {
-        $service = Services::find($id);
+    public function service(Request $request) {
 
+        try {
+            $service = new Services();
+            $service->fill($request->all());
+            //dd($request->length);
+            $service->save();
+            return redirect()->to('tableau-de-bord');
+        } catch (\Exception $exception){
+            print $exception;
+        }
+    }
+
+    public function delService($id) {
+        try {
+            $service = Services::where('id', $id)->first();
+            $service->delete();
+            return redirect()->to('tableau-de-bord');
+
+        } catch (\Exception $exception){
+            print $exception;
+        }
     }
 }

@@ -4,46 +4,39 @@
     <div class="container mt-5 dashboard-bg">
         <div class="row justify-content-center">
             <div class="col-md-8 p-5">
-                <form method="post" action="{{ route('service.post') }}" class="p-5" enctype="multipart/form-data">
+                <form method="post" action="{{ route('service.post') }}" class="p-5 text-center">
                     @csrf
-                    @isset($service)
-                        <div class="row justify-content-center">
-                            <div class="col-sm-4 text-center py-3">
-                                <img src="{{$service->logoPath}}" alt="{{$service->name}}" class="img-fluid text-center mx-auto">
-                            </div>
-                        </div>
-                    @endisset
-                    <div class="form-group row text-center">
-                        <label class="col-form-label col-sm-4 font-weight-bold">Nom</label>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4 font-weight-bold">Titre</label>
                         <div class="col-sm-8">
-                            @isset($service)
-                                <input class="form-control" name="serviceName" required value="{{$service->name}}">
-                            @else
-                                <input class="form-control" name="serviceName" required>
-                            @endisset
-                        </div>
-                    </div>
-                    <div class="form-group row text-center">
-                        <label class="col-form-label col-sm-4 font-weight-bold">Lien du site</label>
-                        <div class="col-sm-8">
-                            @isset($service)
-                                <input class="form-control" name="serviceLink" value="{{$service->link}}">
-                            @else
-                                <input class="form-control" name="serviceLink">
-                            @endisset
+                            <input class="form-control" name="title" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label col-sm-4 font-weight-bold">Logo du partenaire</label>
-                        <div class="col-sm-8">
-                            <input type="file" required class="form-control"
-                                   id="logoPath" name="logoPath"
-                                   accept="image/png, image/jpeg">
+                        <label class="col-form-label col-sm-4 font-weight-bold">Prix</label>
+                        <div class="input-group col-sm-8">
+                            <input type="number" class="form-control" step="0.5" required id="price" name="price">
+                            <div class="input-group-append">
+                                <span class="input-group-text">€</span>
+                            </div>
                         </div>
                     </div>
-                    @isset($service)
-                        <input type="hidden" value="{{$service->id}}" name="serviceId">
-                    @endisset
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4 font-weight-bold">Durée</label>
+                        <div class="input-group col-sm-8">
+                            <input type="text" class="form-control" required id="length" name="length">
+                            <div class="input-group-append">
+                                <span class="input-group-text">minutes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row text-center">
+                        <label class="col-form-label col-sm-4 font-weight-bold">Description</label>
+                        <textarea class="col-sm-8 form-control pageEditor" name="description" required>
+                        </textarea>
+                    </div>
+
                     <a href="{{ route('dashboard') }}" class="btn btn-secondary">Retour</a>
                     <button type="submit" class="btn btn-success">Ajouter</button>
                 </form>

@@ -111,7 +111,8 @@
                     </article>
                     <article class="tabs__content js-tabs-content" id="tab-3">
                         <div class="row justify-content-center">
-                            <div class="col-sm-6 my-4">
+                            <div class="col-sm-6 my-4 text-center">
+                                <p class="font-weight-bold">{{count($services)}} services</p>
                                 <a href="{{ route('newService') }}" class="btn btn-block btn-outline-secondary">
                                     Ajouter un service
                                 </a>
@@ -121,7 +122,9 @@
                             @csrf
                             @foreach($services as $service)
                             <div class="form-group row">
-                                <div class="col-sm-1 font-weight-bold text-center py-4">{{ $loop->index }}.</div>
+                                <div class="col-sm-1 font-weight-bold text-center py-4">
+                                    <form method="post" action="{{ route('service.delete', ['id' => $service->id]) }}">@csrf<button class="btn btn-danger"><i class="fa fa-trash"></i></button></form>
+                                </div>
                                 <div class="col-sm-5">
                                     <div class="row">
                                         <div class="col-sm-12">

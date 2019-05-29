@@ -108,3 +108,9 @@ Route::post('/pages', 'DashboardController@pages')
 
 Route::post('/services', 'DashboardController@services')
     ->name('services.post');
+
+Route::post('/service', 'DashboardController@service')
+    ->name('service.post');
+
+Route::post('/delService/{id}', 'DashboardController@delService')
+    ->name('service.delete');
