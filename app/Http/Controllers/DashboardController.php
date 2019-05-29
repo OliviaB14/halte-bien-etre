@@ -8,9 +8,7 @@ use App\PagesSettings;
 use App\Partners;
 use App\Services;
 use App\Settings;
-use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
-use mysql_xdevapi\Exception;
 
 class DashboardController extends Controller
 {
@@ -122,7 +120,6 @@ class DashboardController extends Controller
         try {
             $service = new Services();
             $service->fill($request->all());
-            //dd($request->length);
             $service->save();
             return redirect()->to('tableau-de-bord');
         } catch (\Exception $exception){

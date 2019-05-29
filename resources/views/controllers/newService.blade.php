@@ -31,6 +31,22 @@
                         </div>
                     </div>
 
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4 font-weight-bold">Icône</label>
+                        <div class="col-sm-8">
+                            @foreach($icons as $icon)
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="imagePath" id="imagePath" value="{{$icon}}">
+                                    <label class="form-check-label" for="imagePath">
+                                        <div class="ci-icon bg-white text-black-50 p-3">
+                                            <i class="{{$icon}}"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
                     <div class="form-group row text-center">
                         <label class="col-form-label col-sm-4 font-weight-bold">Description</label>
                         <textarea class="col-sm-8 form-control pageEditor" name="description" required>

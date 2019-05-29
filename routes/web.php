@@ -47,8 +47,10 @@ Route::get('qui-sommes-nous', function () {
 })->name('about');
 
 Route::get('prestations', function () {
+    $services = Services::all();
     return view('prestations', [
-        'current_page' => 'prestations'
+        'current_page' => 'prestations',
+        'services' => $services,
     ]);
 })->name('prestations');
 
@@ -85,7 +87,61 @@ Route::get('/réglages', 'HomeController@index')->name('home');
 Route::get('/tableau-de-bord', 'HomeController@dashboard')->name('dashboard');
 
 Route::get('/nouveau-service', function() {
-    return view('controllers.newService');
+    $icons = [
+        'flaticon-001-meditation',
+        'flaticon-002-yin-yang',
+        'flaticon-003-lotus-flower',
+        'flaticon-004-buddha',
+        'flaticon-005-jainism',
+        'flaticon-006-swastika',
+        'flaticon-007-om',
+        'flaticon-008-yoga',
+        'flaticon-009-yoga-1',
+        'flaticon-010-chakra',
+        'flaticon-011-hamsa',
+        'flaticon-012-mandala',
+        'flaticon-013-prayer',
+        'flaticon-014-mudra',
+        'flaticon-015-stones',
+        'flaticon-016-incense',
+        'flaticon-017-monk',
+        'flaticon-018-prayer-1',
+        'flaticon-019-chakra-1',
+        'flaticon-020-candle',
+        'flaticon-021-yoga-mat',
+        'flaticon-022-ankh',
+        'flaticon-023-cross',
+        'flaticon-024-eye-of-ra',
+        'flaticon-025-god',
+        'flaticon-026-dharma-wheel',
+        'flaticon-027-endless-knot',
+        'flaticon-028-chakra-2',
+        'flaticon-029-tea',
+        'flaticon-030-bible',
+        'flaticon-031-triskele',
+        'flaticon-032-chakra-3',
+        'flaticon-033-chakra-4',
+        'flaticon-034-yin-yang-1',
+        'flaticon-035-chinese',
+        'flaticon-036-shinto',
+        'flaticon-037-koi',
+        'flaticon-038-triquetra',
+        'flaticon-039-fish',
+        'flaticon-040-islam',
+        'flaticon-041-torah',
+        'flaticon-042-peace-sign',
+        'flaticon-043-zen',
+        'flaticon-044-aromatherapy',
+        'flaticon-045-menorah',
+        'flaticon-046-kippah',
+        'flaticon-047-angel',
+        'flaticon-048-church',
+        'flaticon-049-shrine',
+        'flaticon-050-mosque',
+    ];
+    return view('controllers.newService', [
+        'icons' => $icons,
+    ]);
 })->name('newService');
 
 Route::get('/partenaire/{id?}', function($id = null) {
