@@ -4,6 +4,9 @@
     <div class="container mt-5 dashboard-bg">
         <div class="row">
             <div class="col-md-12">
+                <a href="{{ route('welcome') }}" class="btn btn-warning"><i class="fa fa-arrow-circle-left mr-4"></i>Retour vers le site</a>
+            </div>
+            <div class="col-md-12">
                 <section class="tabs mt-5">
                     <ul class="tabs__header">
                         <li class="tabs__header--title js-tabs-title active" data-tab="#tab-1">Général</li>
