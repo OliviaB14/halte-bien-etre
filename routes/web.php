@@ -48,9 +48,12 @@ Route::get('qui-sommes-nous', function () {
 
 Route::get('prestations', function () {
     $services = Services::all();
+    $presentation = \App\PagesSettings::where('pageTitle', 'mes-prestations')
+        ->where('section', 'description')->first();
     return view('prestations', [
         'current_page' => 'prestations',
         'services' => $services,
+        'presentation' => $presentation
     ]);
 })->name('prestations');
 
@@ -170,3 +173,6 @@ Route::post('/service', 'DashboardController@service')
 
 Route::post('/delService/{id}', 'DashboardController@delService')
     ->name('service.delete');
+
+
+Route::post('/send', 'PagesController@sendMail')->name('sendMail');

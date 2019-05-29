@@ -56,15 +56,6 @@
                         <div class="col-12">
                             <ul class="list-unstyled">
                                 <a href="https://www.facebook.com/pg/lahaltebienetre/shop/?ref=page_internal" target="_blank">
-                                    <li class="media">
-                                        <img src="{{ asset('img/products/eau-micellaire-bio.jpg') }}" class="mr-3 shadow" width="150px" alt="...">
-                                        <div class="media-body">
-                                            <h5 class="mt-0 mb-1">Eau micellaire bio</h5>
-                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                        </div>
-                                    </li>
-                                </a>
-                                <a href="https://www.facebook.com/pg/lahaltebienetre/shop/?ref=page_internal" target="_blank">
                                     <li class="media my-4">
                                         <div class="media-body">
                                             <h5 class="mt-0 mb-1">Stick inhalateur aux huiles essentielles</h5>
@@ -97,7 +88,7 @@
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="testimonial-content">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarc.arnoult%2Fposts%2F2316417905045465&width=500" width="500" height="161" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarc.arnoult%2Fposts%2F2316417905045465&width=500" width="500" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                     <a href="https://www.facebook.com/pg/lahaltebienetre/reviews/?ref=page_internal">
                         <h6>
                             <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png" alt="" width="34">

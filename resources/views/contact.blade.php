@@ -32,18 +32,19 @@
                         <span>Informations de contact</span>
                         <h4>N'attendez-plus !</h4>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form" method="post" action="/send">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Votre nom">
+                                <input type="text" required placeholder="Votre nom" name="name">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="Votre adresse e-mail">
+                                <input type="text" required placeholder="Votre e-mail ou téléphone" name="email">
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Votre message">
-                                <textarea placeholder="Votre message"></textarea>
-                                <button class="site-btn">envoyer</button>
+                                <input type="text" required placeholder="Prestation choisie" name="service">
+                                <textarea placeholder="Votre message" required name="txtmessage"></textarea>
+                                <button class="site-btn" type="submit">envoyer</button>
                             </div>
                         </div>
                     </form>

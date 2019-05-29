@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\ContactSettings;
+use App\Mail\Contact;
 use App\OpenHours;
 use App\PagesSettings as Pages;
 use App\Partners;
 use App\Services;
 use App\Settings;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -57,4 +59,6 @@ class HomeController extends Controller
             'partenariats' => $partenariats,
         ]);
     }
+
+
 }

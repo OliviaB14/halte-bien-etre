@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12">
-                    <p>Vous trouverez ici mes prestations.</p>
+                    <p>{!! $presentation->body !!}</p>
                 </div>
                 @foreach($services as $service)
                     <div class="col-md-4">
