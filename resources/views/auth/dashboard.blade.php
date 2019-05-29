@@ -13,24 +13,18 @@
                     </ul>
                     <div class="tabs__underline js-tabs-underline"></div>
                     <article class="tabs__content js-tabs-content active" id="tab-1">
-                        <form id="generalSettings" method="post">
+                        <form id="generalSettings" method="post" action="{{route('settings.post')}}" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group row">
                                 <label for="websiteTitle" class="col-sm-3 col-form-label">Titre du site</label>
                                 <div class="col-sm-9">
-                                    <input value="{{$settings->websiteTitle}}" type="email" class="form-control" id="websiteTitle" placeholder="La Halte Bien-être" name="websiteTitle">
+                                    <input value="{{$settings->websiteTitle}}" required type="text" class="form-control" id="websiteTitle" placeholder="La Halte Bien-être" name="websiteTitle">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="slogan" class="col-sm-3 col-form-label">Slogan</label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" id="slogan" placeholder="Votre slogan" name="slogan">{{$settings->slogan}}</textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="logoPath" class="col-sm-3 col-form-label">Logo</label>
-                                <div class="col-sm-3"></div>
-                                <div class="col-sm-6">
-                                    <input type="file" class="form-control-file" id="logoPath" name="logoPath">
+                                    <textarea class="form-control" required id="slogan" placeholder="Votre slogan" name="slogan">{{$settings->slogan}}</textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -47,10 +41,10 @@
                             <div class="form-group row justify-content-around my-1 text-center">
                                 <label class="col-sm-3 font-weight-bold">{{$day->day}}</label>
                                 <div class="col-sm-3">
-                                    <input type="checkbox" class="mx-5" name="{{$day->day}}[]" {{$day->open ? 'checked' : ''}}>
+                                    <input type="checkbox" class="mx-5" name="{{$day->day}}[open]" {{$day->open ? 'checked' : ''}}>
                                 </div>
-                                <input class="form-control col-sm-3" name="{{$day->day}}[]" type="text" value="{{$day->openTime}}"/>
-                                <input class="form-control col-sm-3" name="{{$day->day}}[]" type="text" value="{{$day->closeTime}}"/>
+                                <input class="form-control col-sm-3" name="{{$day->day}}[openTime]" type="text" value="{{$day->openTime}}"/>
+                                <input class="form-control col-sm-3" name="{{$day->day}}[closeTime]" type="text" value="{{$day->closeTime}}"/>
                             </div>
                             @endforeach
                             <button class="btn btn-success mt-3" type="submit">Valider les changements</button>

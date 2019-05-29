@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\OpenHours;
 use App\Partners;
+use App\Settings;
+use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -34,5 +37,31 @@ class DashboardController extends Controller
             dd($e);
         }
 
+    }
+
+    public function general(Request $request) {
+
+        $general = Settings::find(1);
+        $validated = $request->validate([
+            'websiteTitle' => 'required|string|max:255',
+            'slogan' => 'nullable|string|max:255',
+        ]);
+
+        $general->fill($validated);
+        $general->save();
+
+        $openHours = OpenHours::all();
+
+        foreach ($openHours as $day){
+            if(isset($request->get($day->day)['open'])) {
+                $day->open = true;
+                $day->openTime = $request->get($day->day)['openTime'];
+                $day->closeTime = $request->get($day->day)['closeTime'];
+            } else {
+                $day->open = false;
+            }
+            $day->save();
+        }
+        return redirect()->to('tableau-de-bord');
     }
 }

@@ -99,3 +99,6 @@ Route::get('/partenaire/{id?}', function($id = null) {
 
 Route::post('/newPartner', 'DashboardController@newPartner')
     ->name('partner.post');
+
+Route::post('/settings', 'DashboardController@general')
+    ->name('settings.post');
