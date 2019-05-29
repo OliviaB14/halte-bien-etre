@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('body')
-    <!-- Page Info section -->
     <section class="page-info-section set-bg" data-setbg="img/page-top-bg/1.png">
         <img src="img/page-top-bg/page-info-img.png" alt="" class="page-info-img">
         <div class="container">
@@ -27,66 +26,4 @@
             </div>
         </div>
     </section>
-
-    <div class="row">
-        <div class="col">
-            <img src="{{ asset('') }}">
-        </div>
-    </div>
-
-
-    <!-- Appointment section -->
-    <section class="appointment-section set-bg" data-setbg="img/appointment-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="appointment-img">
-                        <img src="img/appointment-icon.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="appointment-text text-white">
-                        <span>Begginer & Advanced</span>
-                        <h2>Make an appointment</h2>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Appointment section -->
-
-
-    <!-- About page timetable section -->
-    <section class="ap-timetable-section">
-        <div class="ap-timetable-title">
-            <h4>Today’s Timetable</h4>
-        </div>
-        <div class="timetable-item">
-            <i class="flaticon-019-chakra-1"></i>
-            <span>12:30 am - 02:00 PM</span>
-            <h5>Meditation</h5>
-            <p>With : Maria Smith & James Brown</p>
-        </div>
-        <div class="timetable-item">
-            <i class="flaticon-021-yoga-mat"></i>
-            <span>02:30 pm - 04:00 PM</span>
-            <h5>Yoga</h5>
-            <p>With : Maria Smith & James Brown</p>
-        </div>
-        <div class="timetable-item">
-            <i class="flaticon-001-meditation"></i>
-            <span>12:30 am - 02:00 PM</span>
-            <h5>Pilates</h5>
-            <p>With : Maria Smith & James Brown</p>
-        </div>
-        <div class="timetable-item">
-            <i class="flaticon-044-aromatherapy"></i>
-            <span>02:30 pm - 04:00 PM</span>
-            <h5>Hatha</h5>
-            <p>With : Maria Smith & James Brown</p>
-        </div>
-    </section>
-    <!-- About page timetable section end -->
-
 @endsection
