@@ -102,3 +102,6 @@ Route::post('/newPartner', 'DashboardController@newPartner')
 
 Route::post('/settings', 'DashboardController@general')
     ->name('settings.post');
+
+Route::post('/pages', 'DashboardController@pages')
+    ->name('pages.post');

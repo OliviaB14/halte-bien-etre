@@ -51,7 +51,8 @@
                         </form>
                     </article>
                     <article class="tabs__content js-tabs-content" id="tab-2">
-                        <form id="pagesSettings" method="post">
+                        <form id="pagesSettings" method="post" action="{{ route('pages.post') }}">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-12 my-3">
                                     <h3>Qui sommes-nous ?</h3>
@@ -61,7 +62,10 @@
                                 @foreach($quiSommesNous as $section)
                                     <label class="col-sm-3 col-form-label">{{$section->section}}</label>
                                     <div class="col-sm-9">
-                                        <div id="monParcours">{!! $section->body !!}</div>
+                                       {{-- <div id="monParcours"></div>--}}
+                                        <textarea id="monParcours" class="pageEditor" name="monParcours">
+                                            {!! $section->body !!}
+                                        </textarea>
                                     </div>
                                 @endforeach
                             </div>
@@ -74,7 +78,9 @@
                                 @foreach($mesPrestations as $section)
                                     <label class="col-sm-3 col-form-label text-capitalize">{{$section->section}}</label>
                                     <div class="col-sm-9">
-                                        <div id="mesPrestationsDescription">{!! $section->body !!}</div>
+                                        <textarea id="mesPrestationsDescription" class="pageEditor" name="mesPrestationsDescription">
+                                            {!! $section->body !!}
+                                        </textarea>
                                     </div>
                                 @endforeach
                             </div>
@@ -86,7 +92,7 @@
                             @foreach($partenariats as $info)
                                 <div class="form-group row justify-content-around my-1 text-center">
                                     <label class="col-sm-3 col-form-label text-capitalize">{{$info->section}}</label>
-                                    <textarea class="form-control col-sm-9" name="{{$info->section}}" type="text">{{$info->body}}</textarea>
+                                    <textarea class="form-control col-sm-9 pageEditor" name="{{$info->section}}" type="text">{{$info->body}}</textarea>
                                 </div>
                             @endforeach
                             <div class="row">
@@ -181,6 +187,6 @@
                     </article>
                 </section>
             </div>
-        </div><!-- Initialize Quill editor -->
+        </div>
     </div>
 @endsection

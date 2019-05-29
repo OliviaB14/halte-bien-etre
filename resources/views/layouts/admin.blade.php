@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="{{asset('css/flaticon.css') }}"/>
     <link rel="stylesheet" href="{{asset('css/slicknav.min.css') }}"/>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
-    <!-- Main Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">    <!-- Main Stylesheets -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/custom.css')}}"/>
 
@@ -44,15 +43,16 @@
 
 <!--====== Javascripts & Jquery ======-->
 <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/circle-progress.min.js') }}"></script>
 <script src="http://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-<script src="{{ asset('js/main.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script><script src="{{ asset('js/main.js') }}"></script>
 
 <script>
-    var toolbarOptions = [
+/*    var toolbarOptions = [
         ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
         ['blockquote', 'code-block'],
 
@@ -78,7 +78,13 @@
     };
     var monParcours = new Quill('#monParcours', options);
     var mesPrestationsDescription = new Quill('#mesPrestationsDescription', options);
-    var serviceEditor = new Quill('.serviceEditor', options);
+    var serviceEditor = new Quill('.serviceEditor', options);*/
+
+$(document).ready(function() {
+    $('.pageEditor').summernote({
+        lang: 'fr-FR'
+    });
+});
 </script>
 
 </body>

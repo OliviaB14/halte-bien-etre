@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\ContactSettings;
 use App\OpenHours;
+use App\PagesSettings;
 use App\Partners;
 use App\Settings;
 use Hamcrest\Core\Set;
@@ -62,6 +64,40 @@ class DashboardController extends Controller
             }
             $day->save();
         }
+        return redirect()->to('tableau-de-bord');
+    }
+
+    public function pages(Request $request)
+    {
+
+        $email = ContactSettings::where('label', 'email')->first();
+        $email->value = $request->email;
+        $email->save();
+        $telephone = ContactSettings::where('label', 'telephone')->first();
+        $telephone->value = $request->telephone;
+        $telephone->save();
+        $facebook = ContactSettings::where('label', 'facebook')->first();
+        $facebook->value = $request->facebook;
+        $facebook->save();
+        $presentation = ContactSettings::where('label', 'presentation')->first();
+        $presentation->value = $request->presentation;
+        $presentation->save();
+
+        $monParcours = PagesSettings::where('pageTitle', 'qui-sommes-nous')
+            ->where('section', 'monParcours')->first();
+        $monParcours->body = $request->monParcours;
+        $monParcours->save();
+
+        $mesPrestationsDescription = PagesSettings::where('pageTitle', 'mes-prestations')
+            ->where('section', 'description')->first();
+        $mesPrestationsDescription->body = $request->mesPrestationsDescription;
+        $mesPrestationsDescription->save();
+
+        $description = PagesSettings::where('pageTitle', 'partenariats')
+            ->where('section', 'description')->first();
+        $description->body = $request->description;
+        $description->save();
+
         return redirect()->to('tableau-de-bord');
     }
 }
