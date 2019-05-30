@@ -121,45 +121,35 @@
                                 </a>
                             </div>
                         </div>
-                        <form id="servicesSettings" method="post" action="{{ route('services.post') }}">
+                        @foreach($services as $service)
+                        <div class="form-group row justify-content-center">
                             @csrf
-                            @foreach($services as $service)
-                            <div class="form-group row">
-                                <div class="col-sm-1 font-weight-bold text-center py-4">
-                                    <form method="post" action="{{ route('service.delete', ['id' => $service->id]) }}">@csrf<button class="btn btn-danger"><i class="fa fa-trash"></i></button></form>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <input class="form-control" name="serviceTitle{{$service->id}}" value="{{$service->title}}"/>
-                                        </div>
+                            <div class="col-sm-8">
+                                <div class="row text-white text-center">
+                                    <div class="col-sm-1">
+                                        <form method="post" action="{{ route('service.delete', ['id' => $service->id]) }}">@csrf
+                                            <a class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </form>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-group col-sm-6">
-                                            <input type="number" class="form-control" name="servicePrice{{$service->id}}" value="{{$service->price}}">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">€</span>
-                                            </div>
-                                        </div>
-                                        <div class="input-group col-sm-6">
-                                            <input type="number" step="1" min="5" class="form-control" value="{{$service->length}}" name="serviceLength{{$service->id}}">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">minutes</span>
-                                            </div>
-                                        </div>
+                                    <div class="col-sm-1">
+                                        <a class="btn btn-primary" href="{{ route('newService', ['id' => $service->id]) }}">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-10 serviceLength">
+                                        {{$service->title}} - {{$service->price}} € - {{$service->length}} minutes
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <textarea class="form-control" name="serviceDescription{{$service->id}}">{{$service->description}}</textarea>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        {!! $service->description !!}
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
-                            <button class="btn btn-success mt-3" type="submit">Valider les changements</button>
-                        </form>
+                            </div>
+                        @endforeach
                     </article>
                     <article class="tabs__content js-tabs-content" id="tab-4">
                         <form id="partnersSettings" method="post">

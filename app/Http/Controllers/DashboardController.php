@@ -21,7 +21,7 @@ class DashboardController extends Controller
         ]);
 
         if($request->has('partnerId')) {
-            $partner = Partners::find($request->has('partnerId'));
+            $partner = Partners::find($request->get('partnerId'));
         } else {
             $partner = new Partners();
         }
@@ -101,24 +101,13 @@ class DashboardController extends Controller
         return redirect()->to('tableau-de-bord');
     }
 
-    public function services(Request $request)
-    {
-        $services = Services::all();
-
-        foreach ($services as $service){
-            $service->title = $request->get('serviceTitle'.$service->id);
-            $service->price = $request->get('servicePrice'.$service->id);
-            $service->length = $request->get('serviceLength'.$service->id);
-            $service->description = $request->get('serviceDescription'.$service->id);
-            $service->save();
-        }
-        return redirect()->to('tableau-de-bord');
-    }
-
     public function service(Request $request) {
-
+        if($request->has('serviceId')) {
+            $service = Services::find($request->get('serviceId'));
+        } else {
+            $service = new Partners();
+        }
         try {
-            $service = new Services();
             $service->fill($request->all());
             $service->save();
             return redirect()->to('tableau-de-bord');

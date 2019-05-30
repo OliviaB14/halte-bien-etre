@@ -89,7 +89,7 @@ Auth::routes();
 Route::get('/réglages', 'HomeController@index')->name('home');
 Route::get('/tableau-de-bord', 'HomeController@dashboard')->name('dashboard');
 
-Route::get('/nouveau-service', function() {
+Route::get('/service/{id?}', function($id = null) {
     $icons = [
         'flaticon-001-meditation',
         'flaticon-002-yin-yang',
@@ -142,9 +142,16 @@ Route::get('/nouveau-service', function() {
         'flaticon-049-shrine',
         'flaticon-050-mosque',
     ];
-    return view('controllers.newService', [
-        'icons' => $icons,
-    ]);
+    if($id == null) {
+        return view('controllers.newService', [
+            'icons' => $icons,
+        ]);
+    } else {
+        $service = Services::find($id);
+        return view('controllers.newService', ['service' => $service,
+            'icons' => $icons,
+        ]);
+    }
 })->name('newService');
 
 Route::get('/partenaire/{id?}', function($id = null) {
@@ -164,9 +171,6 @@ Route::post('/settings', 'DashboardController@general')
 
 Route::post('/pages', 'DashboardController@pages')
     ->name('pages.post');
-
-Route::post('/services', 'DashboardController@services')
-    ->name('services.post');
 
 Route::post('/service', 'DashboardController@service')
     ->name('service.post');
