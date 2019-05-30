@@ -16,22 +16,24 @@
                 <div class="col-sm-12">
                     <p>{!! $presentation->body !!}</p>
                 </div>
-                @foreach($services as $service)
-                    <div class="col-md-4">
-                        <div class="course-item">
-                            <div class="ci-icon">
-                                <i class="{{$service->imagePath}}"></i>
-                            </div>
-                            <span class="serviceLength">{{$service->length}} minutes - {{$service->price}} €</span>
-                            <h4>{{$service->title}}</h4>
-                            <div>
-                                <p>{!! $service->description !!}</p>
-                            </div>
+            </div>
+            @foreach($services as $service)
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="course-item">
+                        <div class="ci-icon">
+                            <i class="{{$service->imagePath}}"></i>
                         </div>
                     </div>
-                @endforeach
-
+                </div>
+                <div class="col-md-8">
+                    <h4 class="serviceLength">{{$service->title}}  <span class="float-right" >{{$service->length}} minutes - {{$service->price}} €</span></h4>
+                    <div>
+                        {!! $service->description !!}
+                    </div>
+                </div>
             </div>
+            @endforeach
         </div>
     </section>
 @endsection
