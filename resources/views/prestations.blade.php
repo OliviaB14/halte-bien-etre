@@ -27,7 +27,9 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <h4 class="serviceLength">{{$service->title}}  <span class="float-right" >{{$service->length}} minutes - {{$service->price}} €</span></h4>
+                    <div class="serviceLength">
+                        <h4><span class="text-white">{{$service->title}}</span>  <p class="float-right">{{$service->length}} minutes - {{$service->price}} €</p></h4>
+                    </div>
                     <div>
                         {!! $service->description !!}
                     </div>

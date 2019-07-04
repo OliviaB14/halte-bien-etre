@@ -127,11 +127,13 @@
                             <div class="col-sm-8">
                                 <div class="row text-white text-center">
                                     <div class="col-sm-1">
-                                        <form method="post" action="{{ route('service.delete', ['id' => $service->id]) }}">@csrf
-                                            <a class="btn btn-danger">
-                                                <i class="fa fa-trash"></i>
-                                            </a>
+                                        <form method="POST" action="{{ route('service.delete', ['id' => $service->id]) }}">
+                                            @csrf
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-danger delete-user"><i class='fa fa-trash'></i></button>
+                                            </div>
                                         </form>
+
                                     </div>
                                     <div class="col-sm-1">
                                         <a class="btn btn-primary" href="{{ route('newService', ['id' => $service->id]) }}">

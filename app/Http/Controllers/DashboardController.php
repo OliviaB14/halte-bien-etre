@@ -105,7 +105,7 @@ class DashboardController extends Controller
         if($request->has('serviceId')) {
             $service = Services::find($request->get('serviceId'));
         } else {
-            $service = new Partners();
+            $service = new Services();
         }
         try {
             $service->fill($request->all());
